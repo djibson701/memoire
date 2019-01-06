@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 3 janv. 2019 01:39:06 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="beans.Test" table="test" catalog="memo" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="n" type="string">
+            <column name="n" length="30" not-null="true" />
+        </property>
+        <property name="p" type="string">
+            <column name="p" length="30" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
