@@ -1,6 +1,6 @@
 <%-- 
-    Document   : login
-    Created on : 3 janv. 2019, 01:42:43
+    Document   : predict
+    Created on : 14 janv. 2019, 22:42:52
     Author     : user
 --%>
 
@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>login</title>
+        <title>JSP Page</title>
     </head>
     <body>
         <h1>Hello World!</h1>

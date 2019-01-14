@@ -15,9 +15,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * @author user
  */
 @Controller
-public class TestContr {
-    @RequestMapping(value = "login",method = RequestMethod.GET)
-    public String login(Model model){
-        return "login";
+public class CancerpredictContr {
+    @RequestMapping(value = "predict", method = RequestMethod.GET)
+    public String index(Model model){
+        return "predict";
     }
 }

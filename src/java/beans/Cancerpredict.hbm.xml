@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 14 janv. 2019 22:36:28 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="beans.Cancerpredict" table="cancerpredict" schema="dbo" catalog="db_memoire" optimistic-lock="version">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <property name="statutSocial" type="string">
+            <column name="statutSocial" length="50" />
+        </property>
+        <property name="contry" type="string">
+            <column name="contry" length="50" />
+        </property>
+        <property name="lieuResidence" type="string">
+            <column name="lieuResidence" length="50" />
+        </property>
+        <property name="statutFumeur" type="string">
+            <column name="statutFumeur" length="50" />
+        </property>
+        <property name="statutMarital" type="string">
+            <column name="statutMarital" length="50" />
+        </property>
+        <property name="sexe" type="string">
+            <column name="sexe" length="50" />
+        </property>
+        <property name="classeDage" type="string">
+            <column name="classeDage" length="50" />
+        </property>
+        <property name="typeCancer" type="string">
+            <column name="typeCancer" length="50" />
+        </property>
+    </class>
+</hibernate-mapping>
