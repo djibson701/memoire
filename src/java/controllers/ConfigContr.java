@@ -15,9 +15,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * @author user
  */
 @Controller
-public class CancerpredictContr {
-    @RequestMapping(value = "predict", method = RequestMethod.GET)
-    public String predict(Model model){
-        return "predict";
+public class ConfigContr {
+    @RequestMapping(value = "configuration",method = RequestMethod.GET)
+    public String configuratiton(Model model){
+        return "configuration";
     }
 }

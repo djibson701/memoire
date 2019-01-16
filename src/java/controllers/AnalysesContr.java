@@ -10,14 +10,16 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+
+
 /**
  *
  * @author user
  */
 @Controller
-public class CancerpredictContr {
-    @RequestMapping(value = "predict", method = RequestMethod.GET)
-    public String predict(Model model){
-        return "predict";
+public class AnalysesContr {
+    @RequestMapping(value = "analyse", method = RequestMethod.GET)
+    public String analyse(Model model){
+        return "analyse";
     }
 }

@@ -9,9 +9,14 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <link type="text/css" rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css"/>
+        <link type="text/css" rel="stylesheet" href="bootstrap/dist/css/bootstrap.css"/>
+        <script type="text/javascript" src="bootstrap/dist/js/jquery.js"></script>
+        <script type="text/javascript" src="bootstrap/dist/js/bootstrap.js"></script>
+        <script type="text/javascript" src="bootstrap/dist/js/bootstrap.min.js"></script>
+        <title>Calcul du risque</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <jsp:include page="menu.jsp"></jsp:include>
     </body>
 </html>

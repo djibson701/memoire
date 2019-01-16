@@ -1,6 +1,11 @@
 package beans;
 // Generated 14 janv. 2019 22:36:27 by Hibernate Tools 4.3.1
 
+import modele.HibernateUtil;
+import org.hibernate.Query;
+import org.hibernate.Session;
+
+
 
 
 /**
@@ -102,9 +107,28 @@ public class Cancerpredict  implements java.io.Serializable {
         this.typeCancer = typeCancer;
     }
 
-
-
-
+public int calculPdePancreas(){
+        int nbre=0;
+        Session session=HibernateUtil.getSessionFactory().getCurrentSession();
+        try {
+            session.beginTransaction();
+            Query query=session.
+                    createQuery("select count(cp.typeCancer) from cancerpredict cp where typeCancer='Pancreas'");
+            nbre=query.executeUpdate();
+            session.getTransaction().commit();
+            return nbre;
+        } catch (Exception e) {
+            e.printStackTrace();
+            session.getTransaction().commit();
+            return nbre;
+        }
+    }
+/*
+public static void main(String[] args) {
+        Cancerpredict c=new Cancerpredict();
+        System.out.println("Nombre : "+c.calculPdePancreas());
+    }
+*/
 }
 
 
