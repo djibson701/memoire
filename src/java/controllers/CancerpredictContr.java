@@ -5,6 +5,7 @@
  */
 package controllers;
 
+import modele.CancerpredictMod;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,6 +19,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class CancerpredictContr {
     @RequestMapping(value = "predict", method = RequestMethod.GET)
     public String predict(Model model){
+        return "predict";
+    }
+    @RequestMapping(value = "researchall", method = RequestMethod.GET)
+    public String getAllCancers(Model model){
+        CancerpredictMod cpm=new CancerpredictMod();
+        model.addAttribute("listCancer",cpm.rechercherTout());
         return "predict";
     }
 }

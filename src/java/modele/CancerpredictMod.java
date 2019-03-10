@@ -7,7 +7,9 @@ package modele;
 
 import beans.Cancerpredict;
 import dao.DAO;
+import java.util.ArrayList;
 import java.util.List;
+import org.hibernate.Session;
 
 /**
  *
@@ -37,6 +39,17 @@ public class CancerpredictMod implements DAO<Cancerpredict>{
 
     @Override
     public List<Cancerpredict> rechercherTout() {
-        return null;
+        List<Cancerpredict> list=new ArrayList<Cancerpredict>();
+        Session session=HibernateUtil.getSessionFactory().getCurrentSession();
+        try {
+            session.beginTransaction();
+            list = session.createCriteria(Cancerpredict.class).list();
+            session.getTransaction().commit();
+        } catch (Exception e) {
+            //e.printStackTrace();
+            System.err.println("ERREUR LIEE A HIBERNATE");
+            session.getTransaction().rollback();
+        }
+        return list;
     }
 }

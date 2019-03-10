@@ -5,7 +5,7 @@
                             <a class="nav-link" href="index.html">Acceuil</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="predict.html">Calcul du risque</a>
+                            <a class="nav-link" href="predict.html">Predict</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="analyse.html">Analyses</a>
