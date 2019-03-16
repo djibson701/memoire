@@ -20,4 +20,5 @@ public class StatContr {
     public String statistiques(Model model){
         return "statistiques";
     }
+    
 }

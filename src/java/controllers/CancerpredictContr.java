@@ -5,12 +5,13 @@
  */
 package controllers;
 
-import modele.CancerpredictMod;
+import beans.Risk;
+import java.text.DecimalFormat;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-
 /**
  *
  * @author user
@@ -18,13 +19,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class CancerpredictContr {
     @RequestMapping(value = "predict", method = RequestMethod.GET)
+    //public String predict(@ModelAttribute(value = "Risk") Risk r,Model model){
     public String predict(Model model){
+        //Risk risk=new Risk();
+        //DecimalFormat df =new DecimalFormat("0.####");
+        //double d=risk.probaBone();
+        //model.addAttribute("pb",df.format(d));
         return "predict";
     }
-    @RequestMapping(value = "researchall", method = RequestMethod.GET)
-    public String getAllCancers(Model model){
-        CancerpredictMod cpm=new CancerpredictMod();
-        model.addAttribute("listCancer",cpm.rechercherTout());
-        return "predict";
-    }
+   
+ 
 }
